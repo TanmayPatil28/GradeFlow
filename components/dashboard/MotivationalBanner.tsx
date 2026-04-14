@@ -1,0 +1,70 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Rocket, ArrowRight } from "lucide-react";
+import Link from "next/link";
+
+interface MotivationalBannerProps {
+  currentCgpa: number;
+  targetCgpa: number;
+}
+
+export default function MotivationalBanner({ currentCgpa, targetCgpa }: MotivationalBannerProps) {
+  const diff = targetCgpa - currentCgpa;
+  const isAbove = currentCgpa >= targetCgpa;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="relative group p-12 rounded-[40px] bg-[#0A0F1E]/60 backdrop-blur-[60px] border border-[#4F8EF7]/20 shadow-[0_50px_100px_rgba(0,0,0,0.9),inset_0_1px_0_rgba(255,255,255,0.05)] overflow-hidden"
+    >
+      <div className="absolute inset-0 rounded-[40px] border-[0.5px] border-white/[0.1] pointer-events-none z-10" />
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+        <div className="flex items-center gap-8 text-center md:text-left">
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="w-20 h-20 rounded-[2.5rem] bg-surface-container flex items-center justify-center text-primary shadow-2xl shadow-primary/20 border border-primary/20"
+          >
+            <Rocket size={40} />
+          </motion.div>
+          
+          <div className="space-y-2">
+            <h3 className="text-3xl font-black font-headline text-white tracking-tighter">
+              {isAbove 
+                ? `You've reached your target of ${targetCgpa.toFixed(2)}!` 
+                : `You are ${diff.toFixed(2)} CGPA away from your target.`}
+            </h3>
+            <p className="text-on-surface-variant font-medium text-lg leading-relaxed max-w-xl">
+              {isAbove 
+                ? "Incredible work! Keep maintaining this momentum to stay at the top." 
+                : `Score above 9.5 GPA this semester to reach your goal of ${targetCgpa.toFixed(2)} CGPA.`}
+            </p>
+          </div>
+        </div>
+
+        <Link href="/planner">
+          <motion.button
+            whileHover={{ scale: 1.05, x: 5 }}
+            whileTap={{ scale: 0.95 }}
+            className="group px-8 py-4 rounded-full bg-primary text-white font-bold flex items-center gap-3 shadow-xl shadow-primary/30 relative overflow-hidden"
+          >
+            <span className="relative z-10">Update My Plan</span>
+            <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+            <motion.div 
+              animate={{ opacity: [0.1, 0.4, 0.1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="absolute inset-0 bg-white" 
+            />
+          </motion.button>
+        </Link>
+      </div>
+
+      {/* Decorative Orbs */}
+      <div className="absolute top-[-10%] right-[-5%] w-[30%] h-[150%] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-20%] left-[-10%] w-[40%] h-[120%] bg-secondary/5 rounded-full blur-[120px] pointer-events-none" />
+    </motion.div>
+  );
+}

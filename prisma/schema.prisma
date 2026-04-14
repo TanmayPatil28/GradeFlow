@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Calculation {
+  id            Int      @id @default(autoincrement())
+  date          DateTime @default(now())
+  semester      String
+  subjects      Json
+  sgpa          Float
+  cgpa          Float
+  total_credits Int
+  created_at    DateTime @default(now())
+
+  @@map("calculations")
+}
+
+model Plan {
+  id                  Int      @id @default(autoincrement())
+  current_cgpa        Float
+  target_cgpa         Float
+  completed_semesters Int
+  remaining_semesters Int
+  required_gpa        Float
+  plan_data           Json
+  created_at          DateTime @default(now())
+
+  @@map("plans")
+}

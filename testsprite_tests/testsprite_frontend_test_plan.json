@@ -1,0 +1,1076 @@
+[
+  {
+    "id": "TC001",
+    "title": "Calculate SGPA/CGPA with percentage input and subject add/remove",
+    "description": "Verifies a student can add subjects, enter percentage-based scores with credits, remove a row, and calculate SGPA/CGPA successfully.",
+    "category": "GPA Calculation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calculator"
+      },
+      {
+        "type": "action",
+        "description": "Add new subjects to the list"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 name with Calculus"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 credits field with 4"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 score field with 85"
+      },
+      {
+        "type": "action",
+        "description": "Add a second subject to the list"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 2 name with Physics"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 2 credits field with 3"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 2 score field with 78"
+      },
+      {
+        "type": "action",
+        "description": "Remove the second subject from the list"
+      },
+      {
+        "type": "action",
+        "description": "Submit calculation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify SGPA and CGPA results are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Calculate SGPA/CGPA using grade points mode",
+    "description": "Verifies a student can switch to grade points input, enter credits and grade points, and calculate SGPA/CGPA successfully.",
+    "category": "GPA Calculation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calculator"
+      },
+      {
+        "type": "action",
+        "description": "Add new subjects to the list"
+      },
+      {
+        "type": "action",
+        "description": "Toggle input mode from percentage to grade points"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 name with Data Structures"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 credits field with 4"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 grade points field with 9"
+      },
+      {
+        "type": "action",
+        "description": "Add a second subject to the list"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 2 name with Discrete Math"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 2 credits field with 3"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 2 grade points field with 8"
+      },
+      {
+        "type": "action",
+        "description": "Submit calculation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify SGPA and CGPA results are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Save a calculated result to the dashboard",
+    "description": "Verifies a student can calculate results and save them so a save confirmation is shown and the record appears in the dashboard history.",
+    "category": "GPA Calculation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calculator"
+      },
+      {
+        "type": "action",
+        "description": "Add new subjects to the list"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 name with Operating Systems"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 credits field with 4"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 score field with 81"
+      },
+      {
+        "type": "action",
+        "description": "Submit calculation"
+      },
+      {
+        "type": "action",
+        "description": "Save results to dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation to open the dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the saved calculations history includes the newly saved record"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify dashboard charts reflect the presence of saved calculation data"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Generate a semester plan to reach a target CGPA",
+    "description": "Verifies a student can enter current standing and a higher target CGPA with remaining semesters and receive per-semester SGPA targets as output.",
+    "category": "Semester Planner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /planner"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid current CGPA into the current CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid number into the completed credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid higher target CGPA into the target CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid number of remaining semesters"
+      },
+      {
+        "type": "action",
+        "description": "Generate the plan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify per-semester SGPA targets are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Browse saved calculations and inspect a past record detail",
+    "description": "Verifies a student can browse saved calculation history and open a past calculation to view its detailed breakdown.",
+    "category": "Academic Analytics (Dashboard)",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calculator"
+      },
+      {
+        "type": "action",
+        "description": "Add new subjects to the list"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 name with Algorithms"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 credits field with 4"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 score field with 88"
+      },
+      {
+        "type": "action",
+        "description": "Submit calculation"
+      },
+      {
+        "type": "action",
+        "description": "Save results to dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation to open the dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Select a saved calculation from the history list"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a detailed breakdown view for the selected calculation is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Add and save a semester record and see the trend update",
+    "description": "Verifies a student can add a semester with SGPA and credits, save it, and the trend visualization updates to include the new record.",
+    "category": "Multi-Semester Tracking",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /multi-semester"
+      },
+      {
+        "type": "action",
+        "description": "Start adding a new semester record"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid semester identifier into the semester field if required"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid credits value into the credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid SGPA value into the SGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Save the semester record"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the trend chart includes the newly added semester record"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "View charts and trend summaries for saved calculations",
+    "description": "Verifies the dashboard renders charts and trend summaries when saved calculations exist.",
+    "category": "Academic Analytics (Dashboard)",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calculator"
+      },
+      {
+        "type": "action",
+        "description": "Add new subjects to the list"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 name with Database Systems"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 credits field with 3"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 score field with 74"
+      },
+      {
+        "type": "action",
+        "description": "Submit calculation"
+      },
+      {
+        "type": "action",
+        "description": "Save results to dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify charts and trend summaries are displayed for saved calculations"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "Build a multi-semester trend with multiple records",
+    "description": "Verifies a power-user can add multiple semester records sequentially and the chart and summary statistics reflect the growing history.",
+    "category": "Multi-Semester Tracking",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /multi-semester"
+      },
+      {
+        "type": "action",
+        "description": "Start adding a new semester record"
+      },
+      {
+        "type": "action",
+        "description": "Fill valid credits and SGPA values for the first semester"
+      },
+      {
+        "type": "action",
+        "description": "Save the semester record"
+      },
+      {
+        "type": "action",
+        "description": "Start adding a second semester record"
+      },
+      {
+        "type": "action",
+        "description": "Fill valid credits and SGPA values for the second semester"
+      },
+      {
+        "type": "action",
+        "description": "Save the semester record"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify summary statistics and the trend chart reflect multiple semesters"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "Generate guidance when target CGPA is lower than current CGPA",
+    "description": "Verifies a student can set a target CGPA below their current CGPA and the planner returns appropriate maintain/improve guidance without requiring unrealistic targets.",
+    "category": "Semester Planner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /planner"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid current CGPA into the current CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid number into the completed credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid lower target CGPA into the target CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid number of remaining semesters"
+      },
+      {
+        "type": "action",
+        "description": "Generate the plan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify advisory guidance is displayed for the lower target scenario"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Generate required grades for an upcoming semester to reach a target CGPA",
+    "description": "Verifies that a student can input current CGPA, upcoming credits, and a target CGPA and receive a per-course required grade prediction output.",
+    "category": "Grade Predictor",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /predictor"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid current CGPA into the current CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid upcoming semester credits value into the upcoming credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid target CGPA into the target CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Generate the grade predictions"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a per-course required grades result is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC011",
+    "title": "Run backlog impact scan and review remediation priorities",
+    "description": "Verifies a student can add backlog items, run the scan, and see a prioritized risk assessment and remediation suggestions.",
+    "category": "Backlog Impact Scanner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /backlog"
+      },
+      {
+        "type": "action",
+        "description": "Add a backlog or failed course item"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid credits value for the backlog item"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid grade status or outcome for the backlog item if required"
+      },
+      {
+        "type": "action",
+        "description": "Run the backlog impact scan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a prioritized remediation list and a CGPA impact/projection output are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC012",
+    "title": "Browse existing semester records to view trend and summary",
+    "description": "Verifies the multi-semester page displays the list of recorded semesters along with trend visualization and summary statistics.",
+    "category": "Multi-Semester Tracking",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /multi-semester"
+      },
+      {
+        "type": "action",
+        "description": "Scroll through the semester records section if needed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a trend visualization and summary statistics are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC013",
+    "title": "Compare feasibility by lowering target CGPA and regenerating predictions",
+    "description": "Verifies that lowering the target CGPA and regenerating updates the displayed required grade predictions to reflect the new target.",
+    "category": "Grade Predictor",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /predictor"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid current CGPA into the current CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid upcoming semester credits value into the upcoming credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid target CGPA into the target CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Generate the grade predictions"
+      },
+      {
+        "type": "action",
+        "description": "Adjust the target CGPA downward to a lower valid value"
+      },
+      {
+        "type": "action",
+        "description": "Regenerate the grade predictions"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the required grades results update to reflect the lower target"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC014",
+    "title": "Update retake plan and rerun scan to change projection",
+    "description": "Verifies a student can modify retake plan inputs and rerun the scan to see the projected impact update.",
+    "category": "Backlog Impact Scanner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /backlog"
+      },
+      {
+        "type": "action",
+        "description": "Add a backlog or failed course item"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid credits value for the backlog item"
+      },
+      {
+        "type": "action",
+        "description": "Run the backlog impact scan"
+      },
+      {
+        "type": "action",
+        "description": "Update the retake plan details or credits assumptions"
+      },
+      {
+        "type": "action",
+        "description": "Run the backlog impact scan again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the displayed projection or risk assessment changes after updating the retake plan"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC015",
+    "title": "Navigate from home to a tool page",
+    "description": "Verifies a student can discover available tools on the landing page and navigate into a selected tool successfully.",
+    "category": "Landing / Home",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the section that lists the available tools"
+      },
+      {
+        "type": "action",
+        "description": "Click a tool card to open that tool"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected tool page is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC016",
+    "title": "Show inline validation when a subject grade is missing",
+    "description": "Verifies the calculator prevents submission and shows inline validation errors when a subject grade field is left empty.",
+    "category": "GPA Calculation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calculator"
+      },
+      {
+        "type": "action",
+        "description": "Add new subjects to the list"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 name with Networks"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 credits field with 3"
+      },
+      {
+        "type": "action",
+        "description": "Leave Subject 1 score field empty"
+      },
+      {
+        "type": "action",
+        "description": "Submit calculation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an inline validation error is visible for the missing grade field"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC017",
+    "title": "Prevent plan generation when required fields are missing",
+    "description": "Verifies the planner blocks generation and shows validation feedback when required inputs are left empty.",
+    "category": "Semester Planner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /planner"
+      },
+      {
+        "type": "action",
+        "description": "Clear any prefilled values in the planner inputs if present"
+      },
+      {
+        "type": "action",
+        "description": "Generate the plan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify inline validation errors are displayed for missing required fields"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC018",
+    "title": "Remove a backlog item and confirm results update accordingly",
+    "description": "Verifies a student can remove a previously added backlog item and rerun the scan to see outputs reflect the reduced backlog set.",
+    "category": "Backlog Impact Scanner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /backlog"
+      },
+      {
+        "type": "action",
+        "description": "Add two backlog or failed course items"
+      },
+      {
+        "type": "action",
+        "description": "Run the backlog impact scan"
+      },
+      {
+        "type": "action",
+        "description": "Remove one backlog item"
+      },
+      {
+        "type": "action",
+        "description": "Run the backlog impact scan again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the results reflect fewer backlog items than before"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC019",
+    "title": "Prevent calculation with invalid numeric inputs",
+    "description": "Verifies the calculator blocks calculation and displays validation feedback for invalid numeric inputs such as zero or negative credits.",
+    "category": "GPA Calculation",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /calculator"
+      },
+      {
+        "type": "action",
+        "description": "Add new subjects to the list"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 name with Chemistry"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 credits field with 0"
+      },
+      {
+        "type": "action",
+        "description": "Fill Subject 1 score field with 75"
+      },
+      {
+        "type": "action",
+        "description": "Submit calculation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a numeric validation error is visible and results are not displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC020",
+    "title": "Prevent scan when no backlog items are provided",
+    "description": "Verifies the backlog scanner handles the empty state by blocking the scan or showing a clear prompt when no items are entered.",
+    "category": "Backlog Impact Scanner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /backlog"
+      },
+      {
+        "type": "action",
+        "description": "Ensure no backlog items exist by removing any added items if present"
+      },
+      {
+        "type": "action",
+        "description": "Run the backlog impact scan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty-state prompt or validation message is displayed for missing backlog items"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC021",
+    "title": "Reject out-of-range CGPA inputs",
+    "description": "Verifies that entering an out-of-range CGPA value results in a validation error and prevents predictions from being generated.",
+    "category": "Grade Predictor",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /predictor"
+      },
+      {
+        "type": "action",
+        "description": "Fill an out-of-range value into the current CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid upcoming semester credits value into the upcoming credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid target CGPA into the target CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Generate the grade predictions"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a CGPA validation error is visible and no results are displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC022",
+    "title": "Reject zero or negative upcoming credits",
+    "description": "Verifies that the predictor requires upcoming credits to be positive and shows a validation error for zero or negative values.",
+    "category": "Grade Predictor",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /predictor"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid current CGPA into the current CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 0 into the upcoming credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid target CGPA into the target CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Generate the grade predictions"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an upcoming credits validation error is visible and no results are displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC023",
+    "title": "View landing page highlights and stats section",
+    "description": "Verifies the landing page presents the feature overview and stats section content as the user scrolls.",
+    "category": "Landing / Home",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll through the feature highlights section"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the stats section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify feature highlight content is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify stats and feature cards are displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC024",
+    "title": "Validate SGPA and credits inputs on semester record",
+    "description": "Verifies the multi-semester form shows validation when SGPA is out of range or credits are non-positive and does not save invalid data.",
+    "category": "Multi-Semester Tracking",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /multi-semester"
+      },
+      {
+        "type": "action",
+        "description": "Start adding a new semester record"
+      },
+      {
+        "type": "action",
+        "description": "Fill a negative value into the credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill an out-of-range value into the SGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Save the semester record"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify input validation errors are visible and the record is not added to the list"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC025",
+    "title": "Validate remaining semesters cannot be zero",
+    "description": "Verifies the planner prevents generating a plan when remaining semesters is set to zero and shows a validation error.",
+    "category": "Semester Planner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /planner"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid current CGPA into the current CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid number into the completed credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid target CGPA into the target CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Select 0 as the number of remaining semesters if selectable, otherwise type 0 into the remaining semesters field"
+      },
+      {
+        "type": "action",
+        "description": "Generate the plan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a remaining semesters validation error is visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC026",
+    "title": "Handle unrealistic targets above the maximum CGPA",
+    "description": "Verifies that setting a target CGPA above the allowed maximum is blocked with validation feedback.",
+    "category": "Grade Predictor",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /predictor"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid current CGPA into the current CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid upcoming semester credits value into the upcoming credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill an out-of-range high value into the target CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Generate the grade predictions"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a target CGPA validation error is visible and no results are displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC027",
+    "title": "Validate backlog item credits must be positive",
+    "description": "Verifies the backlog scanner shows validation when a backlog item has zero or negative credits and does not include it in results.",
+    "category": "Backlog Impact Scanner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /backlog"
+      },
+      {
+        "type": "action",
+        "description": "Add a backlog or failed course item"
+      },
+      {
+        "type": "action",
+        "description": "Fill 0 into the credits field for the backlog item"
+      },
+      {
+        "type": "action",
+        "description": "Run the backlog impact scan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a credits validation error is visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC028",
+    "title": "Show empty state when no saved calculations exist",
+    "description": "Verifies the dashboard displays an empty state when there are no saved calculations available.",
+    "category": "Academic Analytics (Dashboard)",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty state is visible indicating there are no saved calculations"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC029",
+    "title": "Validate CGPA range in planner inputs",
+    "description": "Verifies the planner shows a validation error when the user enters a CGPA value outside the allowed range.",
+    "category": "Semester Planner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /planner"
+      },
+      {
+        "type": "action",
+        "description": "Fill an out-of-range value into the current CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid number into the completed credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid target CGPA into the target CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid number of remaining semesters"
+      },
+      {
+        "type": "action",
+        "description": "Generate the plan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a CGPA range validation error is visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC030",
+    "title": "Validate credits must be positive in planner",
+    "description": "Verifies the planner prevents generation when completed credits is zero or negative and shows a validation error.",
+    "category": "Semester Planner",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /planner"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid current CGPA into the current CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 0 into the completed credits field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid target CGPA into the target CGPA field"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid number of remaining semesters"
+      },
+      {
+        "type": "action",
+        "description": "Generate the plan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a credits validation error is visible"
+      }
+    ],
+    "priority": "Low"
+  }
+]
